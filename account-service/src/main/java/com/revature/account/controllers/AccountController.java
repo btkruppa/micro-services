@@ -1,4 +1,4 @@
-package com.revature.account.api;
+package com.revature.account.controllers;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,11 +12,10 @@ import org.springframework.web.bind.annotation.RestController;
 import com.revature.account.entities.Account;
 
 @RestController
-@RequestMapping("accounts")
-public class Api {
+public class AccountController {
 	private List<Account> accounts;
 
-	public Api() {
+	public AccountController() {
 		accounts = new ArrayList<>();
 		accounts.add(new Account(1, 1, "account1", 50));
 		accounts.add(new Account(2, 3, "account1", 500));

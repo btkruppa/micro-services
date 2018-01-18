@@ -1,4 +1,4 @@
-package com.revature.customer.api;
+package com.revature.customer.controllers;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,14 +13,13 @@ import com.revature.customer.entities.Customer;
 import com.revature.customer.intercomm.AccountClient;
 
 @RestController
-@RequestMapping("customers")
-public class Api {
+public class CustomerController {
 	private List<Customer> customers;
-	
+
 	@Autowired
 	private AccountClient ac;
 
-	public Api() {
+	public CustomerController() {
 		customers = new ArrayList<>();
 		customers.add(new Customer(1, "Chris W.", null));
 		customers.add(new Customer(2, "John Brown", null));
